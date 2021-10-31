@@ -4,60 +4,9 @@
             <div class="avatar">
                 <img src="@/assets/profileTest.jpg" alt="profilePic"/>
             </div>
-            <h3>Hi, My name is Trevor Wong, and I am a full stack developer.</h3>
+            <h3 id="test">Hello, My name is Trevor Wong, and I am a full stack developer.</h3>
         </div>
         <aside>
-            <nav>
-                <template>
-                <v-sheet
-                    height="400"
-                    class="overflow-hidden"
-                    style="position: relative;"
-                >
-                    <v-btn
-                    color="pink"
-                    dark
-                    @click.stop="drawer = !drawer"
-                    >
-                    Toggle
-                    </v-btn>
-            
-                    <v-navigation-drawer
-                    v-model="drawer"
-                    absolute
-                    temporary
-                    >
-                    <v-list-item>
-                        <v-list-item-avatar>
-                        <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
-                        </v-list-item-avatar>
-
-                        <v-list-item-content>
-                        <v-list-item-title>John Leider</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-
-                    <v-divider></v-divider>
-
-                    <v-list dense>
-                        <v-list-item
-                        v-for="item in items"
-                        :key="item.title"
-                        link
-                        >
-                        <v-list-item-icon>
-                            <v-icon>{{ item.icon }}</v-icon>
-                        </v-list-item-icon>
-
-                        <v-list-item-content>
-                            <v-list-item-title>{{ item.title }}</v-list-item-title>
-                        </v-list-item-content>
-                        </v-list-item>
-                    </v-list>
-                    </v-navigation-drawer>
-                </v-sheet>
-                </template>
-            </nav>
         </aside>
         <!-- <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
             <a href="#" class="logo-link w-nav-brand"><h1 class="brand-text">INCREDIBLE</h1></a>
@@ -66,7 +15,7 @@
         </div> -->
         <section class="aboutMe">
             <div class="leftColumn">
-                <h1>I am a full stack developer, with a knack for learning.</h1>
+                <h1 class="wow slideInLeft">"I am a full stack developer, with a knack for learning."</h1>
             </div>
             <div>
                 <h2>HTML5</h2>
@@ -86,18 +35,49 @@
                     <div class="skills bar4"></div>
             </div>
             </div>
-             
         </section>
         <section>
 
         </section>
-      
+        <h2 id="heading">PROJECTS</h2>
+
+        <div id="project-grid-cont">
+            <div>
+               
+                <a target="_blank" href="https://viadellapizza.tk/">Pizza Restaurant</a>
+                <p>Major skills utilized:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Sass</li>
+                    <li>Mixins</li>
+                </ul>
+            </div>
+            <div>
+                <a target="_blank" href="https://viadellapizza.tk/">Twitter Clone Full Stack</a>
+                <p>Major skills utilized:</p>
+                <ul>
+                    <li>VueJS</li>
+                    <li>JavaScript</li>
+                    <li>Python Flask</li>
+                    <li>MariaDB, mySQL</li>
+                    <li>Apache2</li>
+                    <li>HTML, CSS</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+
+ 
     </body>
 </template>
 
 <script>
 import '../css/mainStyle.scss'
 import '../css/profileCardStyle.scss'
+
+
     export default {
         name : "Main",
         data: () => {
@@ -116,7 +96,7 @@ import '../css/profileCardStyle.scss'
 <style lang="scss" scoped>
     .aboutMe {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin-left: 10vw;
         margin-right: 10vw;
         .leftColumn {
@@ -182,5 +162,12 @@ import '../css/profileCardStyle.scss'
         background-color: rgb(35, 59, 192);
         border-radius: 25px;
     }
-   
+    #heading {
+        margin: 10px,0;
+        text-align: center;
+    }
+    #project-grid-cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 </style>

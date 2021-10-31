@@ -35,7 +35,6 @@ $back-col: #0d26c9;
         transform: translate(-50%, -50%);
         width: 150px;
         height: auto;
-
       }
     }
   h3{
@@ -97,7 +96,7 @@ $back-col: #0d26c9;
   .profileCard{
     position: relative;
     width: 80vw;
-    height: 75vh;
+    height: 70vh;
 
       .avatar{
         position: absolute;
@@ -184,7 +183,6 @@ $back-col: #0d26c9;
       }
     }
   }
-
 }
 
 @media only screen and (min-width: 1000px) {
