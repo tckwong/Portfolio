@@ -1,10 +1,83 @@
-body {
-    margin: 0;
+#background {
+    background-color: rgb(43, 53, 85);
+}
+
+h3, h1 {
+        color: #e6f1ff;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+nav{
+    
+    a {
+        display: block;
+        text-decoration: none;
+        color: #e6f1ff;
+        text-align: end;
+    }
+}
+.intro-section {
+    margin-left:10vw;
+    margin-right:10vw;
+    background-color: rgb(43, 53, 85);
+    color: #e6f1ff;
+    div {
     padding: 0;
     box-sizing:border-box;
     font-family: 'Dosis', sans-serif;
+    }
 }
-
-@media only screen and (min-width: 1000px) {
-
+.avatar {
+    width:500px;
+    height:500px;
+    object-fit: cover;
+}
+#avatar-desc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    align-content: center;
+    h2 {
+        align-self: center;
+        justify-self: center;
+        font-size: 2rem;
+        width: 60%;
+    }
+    img {
+        justify-self: center;
+        height: 80%;
+        width: 80%;
+    }
+}
+#project-heading {
+    margin: 10px,0;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top:20px;
+    ::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 55%;
+        padding-top: 10px;
+        border-bottom: 1px solid white;
+    }
+}
+.project-grid-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10vw;
+    margin-right: 10vw;
+    div {
+        width: 80%;
+        justify-self: center;
+        align-self: center;
+        padding-left: 100px;
+    }
 }
