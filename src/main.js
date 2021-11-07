@@ -6,8 +6,10 @@ import vuetify from './plugins/vuetify'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import "animate.css"
+import VueScrollReveal from 'vue-scroll-reveal';
 
 Vue.config.productionTip = false
+Vue.use(VueScrollReveal)
 
 new Vue({
   router,

@@ -1,89 +1,150 @@
 <template>
-  <section id="background">
-    <body class="intro-section">
-      <nav>
-        <a href="#project-heading">Skills</a><span></span>
-        <a href="#project-heading">Projects</a>
-      </nav>
-        <div class="intro-section">
-            <h3 id="test">Hi, My name is</h3>
-            <h1>Trevor Wong.</h1>
-            <h1>I am a full stack developer.</h1>
-        </div>
-        <div id="avatar-desc-grid">
-              <h2>I am a full stack developer with a solid background in developing full-stack decoupled architectured projects.</h2>
-              <img class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
-          </div>
-          <h2 id="project-heading">TOP SKILLS</h2>
-        <section class="aboutMe">
-          
-            <div class="leftColumn">
-                <h2 class="wow slideInLeft">"I enjoy utilizing my skills to build functional products. I take pride in the quality of my code."</h2>
-            </div>
-            <div>
-                <h2>HTML5</h2>
-                <div class="skills skillContainer">
-                    <div class="bar1"></div>
+    <section id="background">
+        <nav id="menu">
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="#top-skills">Skills</a>
                 </div>
-                <h2>CSS3</h2>
-                <div class="skills skillContainer">
-                    <div class="bar2"></div>
+            </div>
+            <div class="menu-item highlight">
+                <div class="menu-text">
+                    <a href="#projects">Projects</a>
                 </div>
-                <h2>JavaScript</h2>
-                <div class="skills skillContainer">
-                    <div class="bar3"></div>
+                
+            </div>
+            <div class="menu-item highlight">
+                <div class="menu-text">
+                    <a href="#contactAnchor">Contact</a>
                 </div>
-                <h2>Python</h2>
-                <div class="skills skillContainer">
-                    <div class="skills bar4"></div>
             </div>
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="#">Resume</a>
+                </div>
             </div>
-        </section>
-    
-        <section>
-          <h2 id="project-heading">PROJECTS</h2>
-        <div class="project-grid-cont">
-            <div>
-                <a target="_blank" href="https://viadellapizza.tk/">Pizza Restaurant</a>
-                <p>Major skills utilized:</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Sass</li>
-                    <li>Mixins</li>
-                </ul>
+        </nav>
+
+        <body class="intro-section">
+            <!-- Intro section Hello message -->
+            <div class="intro-section">
+                <h3 v-scroll-reveal.reset>Hi, My name is</h3>
+                <h1 v-scroll-reveal.reset>Trevor Wong.</h1>
+                <h1 v-scroll-reveal.reset>I am a full stack developer.</h1>
             </div>
-            
-            <div>
-                <a target="_blank" href="https:tweeterproject.ml/">Twitter Clone Full Stack</a>
-                <p>Major skills utilized:</p>
-                <ul>
-                    <li>VueJS</li>
-                    <li>JavaScript</li>
-                    <li>Python Flask</li>
-                    <li>MariaDB, mySQL</li>
-                    <li>Apache2</li>
-                    <li>HTML, CSS</li>
-                </ul>
-            </div>
-            
-        </div>
-        </section>
         
-    </body>
+            <!-- Picture grid container -->
+            <div id="avatar-desc-grid">
+                <h2 v-scroll-reveal.reset>I am a full stack developer with a strong background in developing full-stack decoupled architectured projects.</h2>
+                <div class="profileBorder">
+                    <img class="borderImage" v-scroll-reveal.reset src="@/assets/techy-border.png" alt="border"/>
+                    <img v-scroll-reveal.reset class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
+                </div>
+                
+            </div>
+            <div v-scroll-reveal.reset id="top-skills">
+                <h2 v-scroll-reveal.reset class="portfolio-heading">TOP SKILLS</h2>
+            </div>
+            
+            <section class="aboutMe">
+                <div class="leftColumn">
+                    <h2 v-scroll-reveal.reset>"I enjoy utilizing my skills to build excellent projects. I take pride in the quality of my code."</h2>
+                </div>
+                <div>
+                    <h4>HTML5</h4>
+                    <div class="skills skillContainer">
+                        <div class="bar1"></div>
+                    </div>
+                    <h4>CSS3</h4>
+                    <div class="skills skillContainer">
+                        <div class="bar2"></div>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <div class="skills skillContainer">
+                        <div class="bar3"></div>
+                    </div>
+                    <h4>VueJS</h4>
+                    <div class="skills skillContainer">
+                        <div class="skills bar4"></div>
+                    </div>
+                    <h4>Python</h4>
+                    <div class="skills skillContainer">
+                        <div class="skills bar5"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Project Section -->
+            <section>
+                <div id="projects">
+                    <h2 v-scroll-reveal.reset class="portfolio-heading">PROJECTS</h2>
+                </div>
+                
+                <div class="project-grid-cont">
+                    <div>
+                        <a target="_blank" href="https://viadellapizza.tk/"><img src="@/assets/pizzaWebsiteTN.png" alt="pizzawebsite"/></a>
+                    </div>
+                    
+                    <div class="project-desc">
+                        <div>
+                            <p>A local Italian restaurant designed to entice new customers to this small family business and to tell their story.</p>
+                            <p>Major skills utilized:</p>
+                            <li>CSS</li>
+                            <li>Sass</li>
+                            <li>Mixins</li>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <a target="_blank" href="https:tweeterproject.ml/"><img src="@/assets/tweetertn.png" alt="twitter clone"/></a>
+                    </div>
+                    <div class="project-desc">
+                        <div>
+                            <p>A twitter clone designed using Vuetify. This website features login authentication, posts, likes, followers, and comments.</p>
+                            <p>Major skills utilized:</p>
+                            <li>VueJS</li>
+                            <li>JavaScript</li>
+                            <li>Python Flask</li>
+                            <li>MariaDB, mySQL</li>
+                            <li>Apache2</li>
+                            <li>HTML, CSS</li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contactAnchor">
+                <template>
+                    <h2 v-scroll-reveal.reset class="contact-heading">Contact</h2>
+                    <v-card
+                elevation="2"
+                ></v-card>
+                    <div id="containerContact">
+                        <ul>
+                            <li>Email : <a href="mailto:wtrevor242@outlook.com">wtrevor242@outlook.com</a></li>
+                            <li>LinkedIn : <a target="_blank" href="https://linkedin.com/in/trevor-w1992">linkedin.com/in/trevor-w1992</a></li>
+                            <li>Phone Number : <a href="tel:5874327438">(587)432-7438</a></li>
+                        </ul>
+                    </div>
+                </template>
+            </section>
+        </body>
     </section>
 </template>
 
 <script>
 import '../css/mainStyle.scss'
-
     export default {
         name : "Home",
         data: () => {
             return {
-
+                active: false,
+                active2: false,
             }
         },
+        methods: {
+            changeState: function() {
+                this.active = !this.active
+            },
+        }
     }
 </script>
 
@@ -94,24 +155,21 @@ import '../css/mainStyle.scss'
         margin-left: 10vw;
         margin-right: 10vw;
         .leftColumn {
-            width: 80%;
+            width: 90%;
             justify-self: center;
             align-self: center;
         }
     }
-    .fill-height {
-        background-color: blue;
-        width: 20vw;
-    }
-    
+
     .skillContainer {
         width: 100%;
+        height: 10%;
         background-color: rgb(153, 183, 197);
         border-radius: 25px;
     }
     .skills {
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
     #skillName {
         position: absolute;
@@ -122,30 +180,39 @@ import '../css/mainStyle.scss'
     }
     .bar1 {
         width: 90%;
-        height: 30px;
+        height: 20px;
         margin-left: 5px;
         background-color: rgb(35, 59, 192);
         border-radius: 25px;
     }
     .bar2 {
         width: 80%;
-        height: 30px;
+        height: 20px;
         margin-left: 5px;
         background-color: rgb(35, 59, 192);
         border-radius: 25px;
     }
     .bar3 {
         width: 70%;
-        height: 30px;
+        height: 20px;
         margin-left: 5px;
         background-color: rgb(35, 59, 192);
         border-radius: 25px;
     }
     .bar4 {
         width: 80%;
-        height: 30px;
+        height: 20px;
         margin-left: 5px;
         background-color: rgb(35, 59, 192);
         border-radius: 25px;
     }
+    .bar5 {
+        width: 75%;
+        height: 20px;
+        margin-left: 5px;
+        background-color: rgb(35, 59, 192);
+        border-radius: 25px;
+    }
+
+
 </style>
