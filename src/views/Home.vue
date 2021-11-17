@@ -86,7 +86,8 @@
                     <div class="project-desc">
                         <div>
                             <p>A local Italian restaurant designed to entice new customers to this small family business and to tell their story.</p>
-                            <p>Major skills utilized:</p>
+                            <p class="inner_heading">Major skills utilized:</p>
+                            <li>HTML</li>
                             <li>CSS</li>
                             <li>Sass</li>
                             <li>Mixins</li>
@@ -99,13 +100,28 @@
                     <div class="project-desc">
                         <div>
                             <p>A twitter clone designed using Vuetify. This website features login authentication, posts, likes, followers, and comments.</p>
-                            <p>Major skills utilized:</p>
+                            <p class="inner_heading">Major skills utilized:</p>
                             <li>VueJS</li>
                             <li>JavaScript</li>
                             <li>Python Flask</li>
-                            <li>MariaDB, mySQL</li>
+                            <li>MariaDB, SQL</li>
                             <li>Apache2</li>
                             <li>HTML, CSS</li>
+                        </div>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://workoutrax.tk/"><img src="@/assets/workoutrax.png" alt="pizzawebsite"/></a>
+                    </div>
+                    
+                    <div class="project-desc">
+                        <div>
+                            <p>A workout tracker designed to allow users to track and log their workouts. This website features a progression chart, and a timer to track the length of a workout.</p>
+                            <p class="inner_heading">Major skills utilized:</p>
+                            <li>Bootstrap, ChartJS</li>
+                            <li>Python Flask</li>
+                            <li>SQL</li>
+                            <li>VueJS</li>
+                            <li>HTML, CSS, JavaScript</li>
                         </div>
                     </div>
                 </div>
@@ -213,6 +229,8 @@ import '../css/mainStyle.scss'
         background-color: rgb(35, 59, 192);
         border-radius: 25px;
     }
-
+    .inner_heading {
+        color: rgb(201, 176, 139);
+    }
 
 </style>
