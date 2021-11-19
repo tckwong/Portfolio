@@ -95,7 +95,7 @@
                     </div>
                     
                     <div>
-                        <a target="_blank" href="https:tweeterproject.ml/"><img src="@/assets/tweetertn.png" alt="twitter clone"/></a>
+                        <a target="_blank" href="https://tweeterproject.ml/"><img src="@/assets/tweetertn.png" alt="twitter clone"/></a>
                     </div>
                     <div class="project-desc">
                         <div>
