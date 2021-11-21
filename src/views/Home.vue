@@ -19,7 +19,7 @@
             </div>
             <div class="menu-item">
                 <div class="menu-text">
-                    <a href="#">Resume</a>
+                    <a href="#resumeSection">Resume</a>
                 </div>
             </div>
         </nav>
@@ -34,7 +34,12 @@
         
             <!-- Picture grid container -->
             <div id="avatar-desc-grid">
-                <h2 v-scroll-reveal.reset>I am a full stack developer with a strong background in developing full-stack decoupled architectured projects.</h2>
+                <div>
+                    <h2>About Me</h2>
+                    <p v-scroll-reveal.reset>I'm a full stack developer located in Calgary, AB. I am a passionate developer with interest in the frontend spectrum as well as the backend. I have a solid background in developing full-stack decoupled architectured projects.</p>
+                    <p v-scroll-reveal.reset>Problem solver, independent, and a very approchable person who loves to learn.</p>
+                </div>
+
                 <div class="profileBorder">
                     <img class="borderImage" v-scroll-reveal.reset src="@/assets/techy-border.png" alt="border"/>
                     <img v-scroll-reveal.reset class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
@@ -47,7 +52,7 @@
             
             <section class="aboutMe">
                 <div class="leftColumn">
-                    <h2 v-scroll-reveal.reset>"I enjoy utilizing my skills to build excellent projects. I take pride in the quality of my code."</h2>
+                    <p v-scroll-reveal.reset>"I always strive to follow best industry practices and writing clean code. I take pride in the quality of my code."</p>
                 </div>
                 <div>
                     <h4>HTML5</h4>
@@ -134,6 +139,15 @@
                 elevation="2"
                 ></v-card>
                     <div id="containerContact">
+                        <!-- FormSubmit endpoint used for contact form submissions -->
+                        <form class="myForm" action="https://formsubmit.co/wtrevor242@outlook.com" method="POST">
+                            <input type="text" name="name" placeholder="name" required>
+                            <input type="email" name="email" placeholder="email" required>
+                            <input type="hidden" name="_next" value="https://trevorwong.ml">
+                            <input type="hidden" name="_captcha" value="false">
+                            <textarea class="text-area" name="message" rows="6" cols="80" placeholder="message"></textarea>
+                            <button id="submitBtn" type="submit">Send</button>
+                        </form>
                         <ul>
                             <li>Email : <a href="mailto:wtrevor242@outlook.com">wtrevor242@outlook.com</a></li>
                             <li>LinkedIn : <a target="_blank" href="https://linkedin.com/in/trevor-w1992">linkedin.com/in/trevor-w1992</a></li>
@@ -142,12 +156,18 @@
                     </div>
                 </template>
             </section>
+            <section id="resumeSection">
+                <h2 v-scroll-reveal.reset class="contact-heading">Resume</h2>
+                <p>Click <a href="https://drive.google.com/file/d/12ZHYJIj_2zM0Ratg--3nTdUe9ChRPxsk/view?usp=sharing">here</a> to view my resume.</p>
+            </section>
         </body>
+
     </section>
 </template>
 
 <script>
 import '../css/mainStyle.scss'
+
     export default {
         name : "Home",
         data: () => {
@@ -157,8 +177,8 @@ import '../css/mainStyle.scss'
             }
         },
         methods: {
-            changeState: function() {
-                this.active = !this.active
+            pushToThankyou() {
+                this.$router.push({name: 'Thankyou'})
             },
         }
     }
@@ -170,10 +190,13 @@ import '../css/mainStyle.scss'
         grid-template-columns: repeat(2, 1fr);
         margin-left: 10vw;
         margin-right: 10vw;
+        column-gap: 4vw;
         .leftColumn {
             width: 90%;
             justify-self: center;
             align-self: center;
+            border: 1px solid white;
+            padding: 100px;
         }
     }
 
