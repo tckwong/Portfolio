@@ -29,9 +29,9 @@
             <div class="intro-section">
                 <!-- Intro section Hello message -->
                 <div class="intro-section flyIn2">
-                    <h3 v-scroll-reveal.reset>Hi, My name is</h3>
-                    <h1 v-scroll-reveal.reset>Trevor Wong.</h1>
-                    <h1 v-scroll-reveal.reset>I am a full stack developer.</h1>
+                    <h3>Hi, My name is</h3>
+                    <h1>Trevor Wong.</h1>
+                    <h1>I am a full stack developer.</h1>
                 </div>
             
                 <!-- Picture grid container -->
@@ -209,15 +209,16 @@ import anime from 'animejs';
 </script>
 
 <style lang="scss" scoped>
-    .intro-section {
+
+.intro-section {
     opacity: 0%;
 
-    @keyframes title_appear {
+    @keyframes appear {
         0% {opacity: 0%;}
         100% {opacity: 100%;}
     }
     
-    animation-name: title_appear;
+    animation-name: appear;
     animation-duration: 0.5s;
     animation-delay: .25s;
     animation-timing-function: ease-in;
