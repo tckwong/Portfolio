@@ -211,25 +211,24 @@ import anime from 'animejs';
 <style lang="scss" scoped>
 
 .intro-section {
-    opacity: 0%;
+    // opacity: 0%;
 
-    @keyframes appear {
-        0% {opacity: 0%;}
-        100% {opacity: 100%;}
-    }
+    // @keyframes appear {
+    //     0% {opacity: 0%;}
+    //     100% {opacity: 100%;}
+    // }
     
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-delay: .25s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+    // animation-name: appear;
+    // animation-duration: 0.5s;
+    // animation-delay: .25s;
+    // animation-timing-function: ease-in;
+    // animation-iteration-count: 1;
+    // animation-fill-mode: forwards; //Maintains the current state of website after animation completes
     margin-left:10vw;
     margin-right:10vw;
     padding-top: 40vh;
     margin-bottom: 40vh;
     
-
     div {
     padding: 0;
     box-sizing:border-box;
