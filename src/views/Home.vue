@@ -178,7 +178,7 @@
 
 <script>
 import '../css/mainStyle.scss'
-import anime from 'animejs/lib/anime.es.js';
+import anime from 'animejs';
 
     export default {
         name : "Home",
@@ -209,5 +209,44 @@ import anime from 'animejs/lib/anime.es.js';
 </script>
 
 <style lang="scss" scoped>
+    .intro-section {
+    opacity: 0%;
+
+    @keyframes title_appear {
+        0% {opacity: 0%;}
+        100% {opacity: 100%;}
+    }
     
+    animation-name: title_appear;
+    animation-duration: 0.5s;
+    animation-delay: .25s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+    margin-left:10vw;
+    margin-right:10vw;
+    padding-top: 40vh;
+    margin-bottom: 40vh;
+    
+
+    div {
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Dosis', sans-serif;
+    }
+    h3 {
+        font-family:'fira code';
+        
+    }
+    h1 {
+        font-family: roboto;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    h1:nth-child(3) {
+        color: #cbcbce;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+}
 </style>

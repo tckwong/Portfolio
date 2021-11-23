@@ -64,51 +64,6 @@ nav .menu-text a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.intro-section {
-  opacity: 0%;
-  animation-name: title_appear;
-  animation-duration: 0.5s;
-  animation-delay: .25s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  padding-top: 40vh;
-  margin-bottom: 40vh;
-}
-
-@keyframes title_appear {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-.intro-section div {
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Dosis', sans-serif;
-}
-
-.intro-section h3 {
-  font-family: 'fira code';
-}
-
-.intro-section h1 {
-  font-family: roboto;
-  font-size: 4rem;
-  font-weight: 600;
-}
-
-.intro-section h1:nth-child(3) {
-  color: #cbcbce;
-  font-size: 4rem;
-  font-weight: 600;
-}
-
 #aboutMeWrapper {
   background-color: #1e222c;
   height: 100vh;
