@@ -10,6 +10,7 @@
   "dependencies": {
     "@popperjs/core": "^2.10.1",
     "animate.css": "^4.1.1",
+    "animejs": "^3.2.1",
     "bootstrap": "^5.1.1",
     "core-js": "^3.6.5",
     "pdfobject": "^2.2.7",

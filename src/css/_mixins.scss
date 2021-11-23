@@ -1,0 +1,12 @@
+$fontSze: 1rem;
+
+@mixin pageLoadAppearH1() {
+    opacity: 0%;
+    
+    animation-name: title_appear;
+    animation-duration: 2.5s;
+    animation-delay: .25s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+}

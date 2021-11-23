@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Oxygen&family=Roboto&display=swap");
 #background {
   background-color: #2b3555;
+  color: #e6f1ff;
 }
 
 h3, h1 {
@@ -11,13 +12,6 @@ h3, h1 {
 h1 {
   font-size: 4rem;
   font-weight: 600;
-}
-
-nav a {
-  display: inline-block;
-  text-decoration: none;
-  color: #e6f1ff;
-  text-align: end;
 }
 
 nav {
@@ -31,6 +25,15 @@ nav {
   perspective: 2000px;
   flex-wrap: wrap;
   top: 3em;
+  margin-left: 15vw;
+  margin-right: 30vw;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #e6f1ff;
+  text-align: end;
 }
 
 nav .menu-item {
@@ -62,11 +65,26 @@ nav .menu-text a:hover {
 }
 
 .intro-section {
+  opacity: 0%;
+  animation-name: title_appear;
+  animation-duration: 0.5s;
+  animation-delay: .25s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   margin-left: 10vw;
   margin-right: 10vw;
-  padding-top: 30vh;
-  background-color: #2b3555;
-  color: #e6f1ff;
+  padding-top: 40vh;
+  margin-bottom: 40vh;
+}
+
+@keyframes title_appear {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .intro-section div {
@@ -91,30 +109,48 @@ nav .menu-text a:hover {
   font-weight: 600;
 }
 
-#avatar-desc-grid {
+#aboutMeWrapper {
+  background-color: #1e222c;
+  height: 100vh;
+  margin-left: -10vw;
+  margin-right: -10vw;
+}
+
+#aboutMeGridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 50vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 25vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
   height: 80%;
   width: 80%;
+  column-gap: 4vw;
   justify-content: center;
   align-content: center;
 }
 
-#avatar-desc-grid h2 {
+#aboutMeGridContainer div {
+  align-self: center;
+}
+
+#aboutMeGridContainer div > h2 {
+  color: #cbcbce;
+  font-family: 'fira code';
   align-self: center;
   justify-self: center;
   font-size: 2rem;
   width: 60%;
 }
 
+#aboutMeGridContainer div > p {
+  font-size: 1.2rem;
+}
+
 .avatar {
   justify-self: center;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   width: 28vw;
   height: 45vh;
@@ -137,23 +173,91 @@ nav .menu-text a:hover {
   text-align: center;
   font-size: 4rem;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 10vh;
 }
 
-.portfolio-heading ::after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  width: 55%;
-  padding-top: 10px;
-  border-bottom: 1px solid white;
+/* *********SKILLS SECTION************** */
+.topSkillContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 15vw;
+  margin-right: 15vw;
+  column-gap: 4vw;
+  margin-top: -20vh;
+}
+
+.topSkillContainer .leftColumn {
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  border: 1px solid white;
+  padding: 120px;
+}
+
+.skillContainer {
+  width: 100%;
+  background-color: #99b7c5;
+  border-radius: 25px;
+}
+
+.bar1 {
+  width: 90%;
+  height: 20px;
+  background-color: #233bc0;
+  border-radius: 25px;
+}
+
+.bar2 {
+  width: 75%;
+  height: 20px;
+  background-color: #233bc0;
+  border-radius: 25px;
+}
+
+.bar3 {
+  width: 85%;
+  height: 20px;
+  background-color: #233bc0;
+  border-radius: 25px;
+}
+
+.bar4 {
+  width: 80%;
+  height: 20px;
+  background-color: #233bc0;
+  border-radius: 25px;
+}
+
+.bar5 {
+  width: 85%;
+  height: 20px;
+  background-color: #233bc0;
+  border-radius: 25px;
+}
+
+.bar6 {
+  width: 75%;
+  height: 20px;
+  background-color: #233bc0;
+  border-radius: 25px;
+}
+
+.inner_heading {
+  color: #c9b08b;
+}
+
+/* *********PROJECT SECTION************** */
+#projects {
+  margin-top: 8vh;
 }
 
 .project-grid-cont {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 10vh;
   row-gap: 30px;
 }
 
@@ -163,7 +267,12 @@ nav .menu-text a:hover {
 
 .project-grid-cont div img {
   width: 100%;
-  border-radius: 20px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.project-grid-cont div img:hover {
+  opacity: 1;
 }
 
 .project-grid-cont div button {
@@ -173,14 +282,17 @@ nav .menu-text a:hover {
   transform: translate(-50%, -50%);
 }
 
-.project-grid-cont div:nth-child(3) img:nth-child(3) {
-  height: 50%;
-  border-radius: 20px;
-}
-
 .project-desc {
   justify-self: center;
   align-self: center;
+  background-color: #33488d;
+}
+
+.project-desc div {
+  width: 90%;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .img-button {
@@ -220,19 +332,88 @@ nav .menu-text a:hover {
 }
 
 #containerContact {
-  height: 30vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 40vh;
   border: 1px solid white;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
 
 #containerContact ul {
   padding-top: 20px;
-  text-align: center;
+  text-align: left;
+  align-self: center;
 }
 
 #containerContact ul li {
   list-style: none;
   font-size: 1.5rem;
+}
+
+#containerContact ul a {
+  text-decoration: none;
+  color: #929284;
+}
+
+#containerContact ul a:hover {
+  color: beige;
+}
+
+.myForm > input {
+  background-color: aliceblue;
+  display: block;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-left: 5px;
+  border: 1px solid black;
+}
+
+.text-area {
+  background-color: aliceblue;
+  margin-top: 20px;
+  width: 25vw;
+  height: 20vh;
+  margin-left: 15px;
+  padding-left: 5px;
+}
+
+#submitBtn {
+  box-shadow: inset 0px 1px 0px 0px #97c4fe;
+  background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+  background-color: #3d94f6;
+  border-radius: 6px;
+  border: 1px solid #337fed;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #1570cd;
+}
+
+#submitBtn:hover {
+  background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  background-color: #1e62d0;
+}
+
+#submitBtn:active {
+  position: relative;
+  top: 1px;
+}
+
+#resumeSection p {
+  text-align: center;
+  padding-bottom: 50vh;
+  font-size: 1.2rem;
+}
+
+#resumeSection a {
+  text-decoration: none;
+  color: #79abb4;
+  font-weight: 800;
 }
 /*# sourceMappingURL=mainStyle.css.map */

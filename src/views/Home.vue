@@ -23,34 +23,41 @@
                 </div>
             </div>
         </nav>
+        <div class="square"></div>
 
-        <body class="intro-section">
-            <!-- Intro section Hello message -->
+        <body id="background">
             <div class="intro-section">
-                <h3 v-scroll-reveal.reset>Hi, My name is</h3>
-                <h1 v-scroll-reveal.reset>Trevor Wong.</h1>
-                <h1 v-scroll-reveal.reset>I am a full stack developer.</h1>
-            </div>
-        
-            <!-- Picture grid container -->
-            <div id="avatar-desc-grid">
-                <div>
-                    <h2>About Me</h2>
-                    <p v-scroll-reveal.reset>I'm a full stack developer located in Calgary, AB. I am a passionate developer with interest in the frontend spectrum as well as the backend. I have a solid background in developing full-stack decoupled architectured projects.</p>
-                    <p v-scroll-reveal.reset>Problem solver, independent, and a very approchable person who loves to learn.</p>
+                <!-- Intro section Hello message -->
+                <div class="intro-section flyIn2">
+                    <h3 v-scroll-reveal.reset>Hi, My name is</h3>
+                    <h1 v-scroll-reveal.reset>Trevor Wong.</h1>
+                    <h1 v-scroll-reveal.reset>I am a full stack developer.</h1>
                 </div>
+            
+                <!-- Picture grid container -->
+                <div id="aboutMeWrapper">
+                    <div id="aboutMeGridContainer">
+                    <div>
+                        <h2>About Me</h2>
+                        <p>I'm a full stack developer located in Calgary, AB. I am a passionate developer with interest in the frontend spectrum as well as the backend. I have a solid background in developing full-stack decoupled architectured projects.</p>
+                        <p v-scroll-reveal.reset>Problem solver, independent, and a very approchable person who loves to learn.</p>
+                    </div>
 
-                <div class="profileBorder">
-                    <img class="borderImage" v-scroll-reveal.reset src="@/assets/techy-border.png" alt="border"/>
-                    <img v-scroll-reveal.reset class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
+                    <div class="profileBorder">
+                        <img class="borderImage" v-scroll-reveal.reset src="@/assets/techy-border.png" alt="border"/>
+                        <img v-scroll-reveal.reset class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
+                    </div>
+                    
+                    </div>
                 </div>
                 
-            </div>
-            <div v-scroll-reveal.reset id="top-skills">
-                <h2 v-scroll-reveal.reset class="portfolio-heading">TOP SKILLS</h2>
+                <div v-scroll-reveal.reset id="top-skills">
+                    <h2 v-scroll-reveal.reset class="portfolio-heading">TOP SKILLS</h2>
+                </div>
             </div>
             
-            <section class="aboutMe">
+
+            <section class="topSkillContainer">
                 <div class="leftColumn">
                     <p v-scroll-reveal.reset>"I always strive to follow best industry practices and writing clean code. I take pride in the quality of my code."</p>
                 </div>
@@ -75,6 +82,11 @@
                     <div class="skills skillContainer">
                         <div class="skills bar5"></div>
                     </div>
+                    <h4>MySQL</h4>
+                    <div class="skills skillContainer">
+                        <div class="skills bar6"></div>
+                    </div>
+                    
                 </div>
             </section>
             <!-- Project Section -->
@@ -161,12 +173,12 @@
                 <p>Click <a href="https://drive.google.com/file/d/12ZHYJIj_2zM0Ratg--3nTdUe9ChRPxsk/view?usp=sharing">here</a> to view my resume.</p>
             </section>
         </body>
-
     </section>
 </template>
 
 <script>
 import '../css/mainStyle.scss'
+import anime from 'animejs/lib/anime.es.js';
 
     export default {
         name : "Home",
@@ -180,80 +192,22 @@ import '../css/mainStyle.scss'
             pushToThankyou() {
                 this.$router.push({name: 'Thankyou'})
             },
+            loadAnimation() {
+                anime({
+                targets: '.flyIn2',
+                translateY: -150,
+                delay: 300,
+                duration: 1500
+                });
+            }
+        },
+        mounted() {
+            this.loadAnimation();
         }
+
     }
 </script>
 
 <style lang="scss" scoped>
-    .aboutMe {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: 10vw;
-        margin-right: 10vw;
-        column-gap: 4vw;
-        .leftColumn {
-            width: 90%;
-            justify-self: center;
-            align-self: center;
-            border: 1px solid white;
-            padding: 100px;
-        }
-    }
-
-    .skillContainer {
-        width: 100%;
-        height: 10%;
-        background-color: rgb(153, 183, 197);
-        border-radius: 25px;
-    }
-    .skills {
-        padding-top: 10px;
-        padding-bottom: 15px;
-    }
-    #skillName {
-        position: absolute;
-        left: 0;
-        background-color: blue;
-        width: 10%;
-        z-index: 5;
-    }
-    .bar1 {
-        width: 90%;
-        height: 20px;
-        margin-left: 5px;
-        background-color: rgb(35, 59, 192);
-        border-radius: 25px;
-    }
-    .bar2 {
-        width: 80%;
-        height: 20px;
-        margin-left: 5px;
-        background-color: rgb(35, 59, 192);
-        border-radius: 25px;
-    }
-    .bar3 {
-        width: 70%;
-        height: 20px;
-        margin-left: 5px;
-        background-color: rgb(35, 59, 192);
-        border-radius: 25px;
-    }
-    .bar4 {
-        width: 80%;
-        height: 20px;
-        margin-left: 5px;
-        background-color: rgb(35, 59, 192);
-        border-radius: 25px;
-    }
-    .bar5 {
-        width: 75%;
-        height: 20px;
-        margin-left: 5px;
-        background-color: rgb(35, 59, 192);
-        border-radius: 25px;
-    }
-    .inner_heading {
-        color: rgb(201, 176, 139);
-    }
-
+    
 </style>
