@@ -202,7 +202,7 @@ import anime from 'animejs';
             }
         },
         mounted() {
-            this.loadAnimation();
+            // this.loadAnimation();
         }
 
     }
@@ -213,6 +213,11 @@ import anime from 'animejs';
 
 .intro-section {
 
+    @keyframes appear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+    }
+
     opacity: 0%;
     animation-name: appear;
     animation-duration: 0.5s;
@@ -220,11 +225,6 @@ import anime from 'animejs';
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; //Maintains the current state of website after animation completes
-
-    @keyframes appear {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
-    }
 
     margin-left:10vw;
     margin-right:10vw;
