@@ -28,7 +28,7 @@
         <body id="background">
             <div class="intro-section">
                 <!-- Intro section Hello message -->
-                <div v-if="toggle" class="intro-section">
+                <div class="intro-section">
                     <h3>Hi, My name is</h3>
                     <h1>Trevor Wong.</h1>
                     <h1>I am a full stack developer.</h1>
@@ -186,7 +186,6 @@ import anime from 'animejs';
             return {
                 active: false,
                 active2: false,
-                toggle: false,
             }
         },
         methods: {
@@ -201,7 +200,6 @@ import anime from 'animejs';
                 delay: 300,
                 duration: 1500
                 });
-                this.toggle = !this.toggle;
             }
         },
         mounted() {
@@ -214,17 +212,17 @@ import anime from 'animejs';
 <style lang="scss" scoped>
 
 .intro-section {
-    @keyframes appear {
-        0% {opacity: 0%;}
-        100% {opacity: 100%;}
-    }
+    // @keyframes appear {
+    //     0% {opacity: 0%;}
+    //     100% {opacity: 100%;}
+    // }
     
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-delay: .25s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+    // animation-name: appear;
+    // animation-duration: 0.5s;
+    // animation-delay: .25s;
+    // animation-timing-function: ease-in;
+    // animation-iteration-count: 1;
+    // animation-fill-mode: forwards; //Maintains the current state of website after animation completes
     margin-left:10vw;
     margin-right:10vw;
     padding-top: 40vh;
