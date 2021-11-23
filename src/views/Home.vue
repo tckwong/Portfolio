@@ -28,7 +28,7 @@
         <body id="background">
             <div class="intro-section">
                 <!-- Intro section Hello message -->
-                <div class="intro-section">
+                <div v-if="toggle" class="intro-section">
                     <h3>Hi, My name is</h3>
                     <h1>Trevor Wong.</h1>
                     <h1>I am a full stack developer.</h1>
@@ -184,8 +184,7 @@ import anime from 'animejs';
         name : "Home",
         data: () => {
             return {
-                active: false,
-                active2: false,
+                toggle: false,
             }
         },
         methods: {
@@ -195,14 +194,15 @@ import anime from 'animejs';
             loadAnimation() {
                 anime({
                 targets: '.intro-section',
-                translateY: -50,
+                translateY: -150,
                 delay: 300,
                 duration: 1500
                 });
+                this.toggle = true;
             }
         },
         mounted() {
-            // this.loadAnimation();
+            this.loadAnimation();
         }
 
     }
@@ -213,18 +213,31 @@ import anime from 'animejs';
 
 .intro-section {
 
-    @keyframes appear {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
-    }
+    // @-webkit-keyframes appear-Chrome {
+    //     0% {opacity: 0%;}
+    //     100% {opacity: 100%;}
+    // }
+    
+    // opacity: 0%;
+    // animation-name: appear-Chrome;
+    // animation-duration: 0.5s;
+    // animation-delay: .25s;
+    // animation-timing-function: ease-in;
+    // animation-iteration-count: 1;
+    // animation-fill-mode: forwards; //Maintains the current state of website after animation completes
 
-    opacity: 0%;
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-delay: .25s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+    // @keyframes appear {
+    // 0% {opacity: 0%;}
+    // 100% {opacity: 100%;}
+    // }
+
+    // opacity: 0%;
+    // animation-name: appear;
+    // animation-duration: 0.5s;
+    // animation-delay: .25s;
+    // animation-timing-function: ease-in;
+    // animation-iteration-count: 1;
+    // animation-fill-mode: forwards; //Maintains the current state of website after animation completes
 
     margin-left:10vw;
     margin-right:10vw;
