@@ -30,7 +30,7 @@
                 <!-- Intro section Hello message -->
                 <div class="intro-section">
                     <h3>Hi, My name is</h3>
-                    <h1 class="name-animate">Trevor Wong.</h1>
+                    <h1>Trevor Wong.</h1>
                     <h1>I am a full stack developer.</h1>
                 </div>
             
@@ -193,10 +193,9 @@ import anime from 'animejs';
                 this.$router.push({name: 'Thankyou'})
             },
             loadAnimation() {
-                
                 anime({
-                targets: '.name-animate',
-                translateY: -150,
+                targets: '.intro-section',
+                translateY: -50,
                 delay: 300,
                 duration: 1500
                 });
@@ -211,20 +210,22 @@ import anime from 'animejs';
 
 <style lang="scss" scoped>
 
-.name-animate {
-    @keyframes appear {
-        0% {opacity: 0%;}
-        100% {opacity: 100%;}
-    }
-    
+
+.intro-section {
+
+    opacity: 0%;
     animation-name: appear;
     animation-duration: 0.5s;
     animation-delay: .25s;
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; //Maintains the current state of website after animation completes
-}
-.intro-section {
+
+    @keyframes appear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+    }
+
     margin-left:10vw;
     margin-right:10vw;
     padding-top: 40vh;
