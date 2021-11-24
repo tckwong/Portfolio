@@ -29,9 +29,12 @@
             <div class="intro-section">
                 <!-- Intro section Hello message -->
                 <div v-if="toggle" class="intro-section">
-                    <h3>Hi, My name is</h3>
-                    <h1>Trevor Wong.</h1>
-                    <h1>I am a full stack developer.</h1>
+                    <div class="">
+                        <h3>Hi, My name is</h3>
+                        <h1>Trevor Wong.</h1>
+                        <h1>I am a full stack developer.</h1>
+                    </div>
+                    
                 </div>
             
                 <!-- Picture grid container -->
@@ -52,7 +55,7 @@
                 </div>
                 
                 <div v-scroll-reveal.reset id="top-skills">
-                    <h2 v-scroll-reveal.reset class="portfolio-heading">TOP SKILLS</h2>
+                    <h2 class="portfolio-heading">TOP SKILLS</h2>
                 </div>
             </div>
             
@@ -146,7 +149,7 @@
 
             <section id="contactAnchor">
                 <template>
-                    <h2 v-scroll-reveal.reset class="contact-heading">Contact</h2>
+                    <h2 class="contact-heading">Contact</h2>
                     <v-card
                 elevation="2"
                 ></v-card>
@@ -169,7 +172,7 @@
                 </template>
             </section>
             <section id="resumeSection">
-                <h2 v-scroll-reveal.reset class="contact-heading">Resume</h2>
+                <h2 class="contact-heading">Resume</h2>
                 <p>Click <a href="https://drive.google.com/file/d/12ZHYJIj_2zM0Ratg--3nTdUe9ChRPxsk/view?usp=sharing">here</a> to view my resume.</p>
             </section>
         </body>
@@ -212,32 +215,18 @@ import anime from 'animejs';
 
 
 .intro-section {
+    @keyframes appear123 {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+    }
 
-    // @-webkit-keyframes appear-Chrome {
-    //     0% {opacity: 0%;}
-    //     100% {opacity: 100%;}
-    // }
-    
-    // opacity: 0%;
-    // animation-name: appear-Chrome;
-    // animation-duration: 0.5s;
-    // animation-delay: .25s;
-    // animation-timing-function: ease-in;
-    // animation-iteration-count: 1;
-    // animation-fill-mode: forwards; //Maintains the current state of website after animation completes
-
-    // @keyframes appear {
-    // 0% {opacity: 0%;}
-    // 100% {opacity: 100%;}
-    // }
-
-    // opacity: 0%;
-    // animation-name: appear;
-    // animation-duration: 0.5s;
-    // animation-delay: .25s;
-    // animation-timing-function: ease-in;
-    // animation-iteration-count: 1;
-    // animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+    opacity: 0%;
+    animation-name: appear123;
+    animation-duration: 0.5s;
+    animation-delay: .25s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
 
     margin-left:10vw;
     margin-right:10vw;
