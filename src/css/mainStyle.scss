@@ -365,3 +365,44 @@ nav .menu-text a:hover {
         font-weight: 800;
     }
 }
+
+.intro-section {
+    margin-left:10vw;
+    margin-right:10vw;
+    padding-top: 40vh;
+    margin-bottom: 45vh;
+    
+    div {
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Dosis', sans-serif;
+    }
+    h3 {
+        font-family:'fira code';
+        
+    }
+    h1 {
+        font-family: roboto;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    h1:nth-child(3) {
+        color: #cbcbce;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+}
+.intro-text {
+    @keyframes appear123 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    opacity: 0;
+    animation-name: appear123;
+    animation-duration: 0.5s;
+    animation-delay: .25s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+}

@@ -29,7 +29,7 @@
             <div class="intro-section">
                 <!-- Intro section Hello message -->
                 <div v-if="toggle" class="intro-section">
-                    <div class="">
+                    <div class="intro-text">
                         <h3>Hi, My name is</h3>
                         <h1>Trevor Wong.</h1>
                         <h1>I am a full stack developer.</h1>
@@ -213,44 +213,4 @@ import anime from 'animejs';
 
 <style lang="scss" scoped>
 
-
-.intro-section {
-    @keyframes appear123 {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
-    }
-
-    opacity: 0%;
-    animation-name: appear123;
-    animation-duration: 0.5s;
-    animation-delay: .25s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
-
-    margin-left:10vw;
-    margin-right:10vw;
-    padding-top: 40vh;
-    margin-bottom: 40vh;
-    
-    div {
-    padding: 0;
-    box-sizing:border-box;
-    font-family: 'Dosis', sans-serif;
-    }
-    h3 {
-        font-family:'fira code';
-        
-    }
-    h1 {
-        font-family: roboto;
-        font-size: 4rem;
-        font-weight: 600;
-    }
-    h1:nth-child(3) {
-        color: #cbcbce;
-        font-size: 4rem;
-        font-weight: 600;
-    }
-}
 </style>
