@@ -369,7 +369,7 @@ nav .menu-text a:hover {
 .intro-section {
     margin-left:10vw;
     margin-right:10vw;
-    padding-top: 40vh;
+    padding-top: 50vh;
     margin-bottom: 45vh;
     
     div {
@@ -392,16 +392,46 @@ nav .menu-text a:hover {
         font-weight: 600;
     }
 }
+
+// Heading animation
 .intro-text {
-    @keyframes appear123 {
+    @keyframes appear {
     0% {opacity: 0;}
     100% {opacity: 1;}
     }
 
     opacity: 0;
-    animation-name: appear123;
+    animation-name: appear;
     animation-duration: 0.5s;
     animation-delay: .25s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+}
+.intro-text2 {
+    @keyframes appear2 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    opacity: 0;
+    animation-name: appear2;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+}
+.intro-text3 {
+    @keyframes appear3 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    opacity: 0;
+    animation-name: appear3;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; //Maintains the current state of website after animation completes

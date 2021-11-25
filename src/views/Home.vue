@@ -28,13 +28,17 @@
         <body id="background">
             <div class="intro-section">
                 <!-- Intro section Hello message -->
-                <div v-if="toggle" class="intro-section">
-                    <div class="intro-text">
-                        <h3>Hi, My name is</h3>
-                        <h1>Trevor Wong.</h1>
-                        <h1>I am a full stack developer.</h1>
+                <div class="intro-section">
+                    <div class="intro-section1">
+                        <h3 class="intro-text">Hi, My name is</h3>
                     </div>
-                    
+                    <div class="intro-section2">
+                        <h1 class="intro-text2">Trevor Wong.</h1>
+                    </div>
+                    <div class="intro-section3">
+                        <h1 class="intro-text3">I am a full stack developer.</h1>
+                    </div>
+                        
                 </div>
             
                 <!-- Picture grid container -->
@@ -48,7 +52,7 @@
 
                     <div class="profileBorder">
                         <img class="borderImage" v-scroll-reveal.reset src="@/assets/techy-border.png" alt="border"/>
-                        <img v-scroll-reveal.reset class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
+                        <img class="avatar" src="@/assets/portfolioPic.jpg" alt="profilePic"/>
                     </div>
                     
                     </div>
@@ -194,18 +198,34 @@ import anime from 'animejs';
             pushToThankyou() {
                 this.$router.push({name: 'Thankyou'})
             },
-            loadAnimation() {
+            animateHeading1() {
                 anime({
                 targets: '.intro-section',
                 translateY: -150,
                 delay: 300,
                 duration: 1500
                 });
-                this.toggle = true;
+                // this.toggle = true;
+            },
+            animateHeading2() {
+                anime({
+                targets: '.intro-section2',
+                translateY: -150,
+                delay: 400,
+                duration: 1500
+                })
+            },
+            animateHeading3() {
+                anime({
+                targets: '.intro-section',
+                translateY: -150,
+                delay: 500,
+                duration: 1500
+                });
             }
         },
         mounted() {
-            this.loadAnimation();
+            this.animateHeading1();
         }
 
     }
