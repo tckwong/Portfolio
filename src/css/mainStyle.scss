@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Oxygen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Oxygen&family=Roboto&display=swap');
 
+main {
+    background: #333;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+}
 #background {
-    background-color: rgb(43, 53, 85);
+    position: relative;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, .8),rgba(0, 0, 0, .5)), url('https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=564&q=80');
+    background-size: cover;
     color: #e6f1ff;
 }
 
@@ -132,13 +145,7 @@ nav .menu-text a:hover {
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
-    margin-top:10vh;
 }
-// .square {
-//     height: 50px;
-//     width: 50px;
-//     background-color: #555;
-// }
 
 /* *********SKILLS SECTION************** */
 .topSkillContainer {
@@ -147,7 +154,7 @@ nav .menu-text a:hover {
     margin-left: 15vw;
     margin-right: 15vw;
     column-gap: 4vw;
-    margin-top: -30vh;
+    margin-top: -40vh;
     
     .leftColumn {
         width: 90%;
@@ -352,11 +359,10 @@ nav .menu-text a:hover {
 }
 
 // Resume section styling
-
 #resumeSection {
     p {
         text-align: center;
-        padding-bottom: 50vh;
+        padding-bottom: 40vh;
         font-size: 1.2rem;
     }
     a {
@@ -423,6 +429,7 @@ nav .menu-text a:hover {
     animation-fill-mode: forwards; //Maintains the current state of website after animation completes
 }
 .intro-text3 {
+    color: rgb(107, 113, 117);
     @keyframes appear3 {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -435,4 +442,17 @@ nav .menu-text a:hover {
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+}
+
+#top-skills {
+    padding-bottom: -100px;
+}
+
+.footer-style {
+    background: linear-gradient(0deg, rgba(44,59,85,1) 0%, rgba(17,22,46,1) 100%);
+    color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

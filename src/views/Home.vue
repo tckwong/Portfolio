@@ -23,7 +23,6 @@
                 </div>
             </div>
         </nav>
-        <div class="square"></div>
 
         <body id="background">
             <div class="intro-section">
@@ -47,7 +46,7 @@
                     <div>
                         <h2>About Me</h2>
                         <p>I'm a full stack developer located in Calgary, AB. I am a passionate developer with interest in the frontend spectrum as well as the backend. I have a solid background in developing full-stack decoupled architectured projects.</p>
-                        <p v-scroll-reveal.reset>Problem solver, independent, and a very approchable person who loves to learn.</p>
+                        <p v-scroll-reveal.reset>I am a problem solver, with an interest in machine learning and AI. I enjoy playing racquet sports, snowboarding, and hiking.</p>
                     </div>
 
                     <div class="profileBorder">
@@ -180,10 +179,26 @@
                 <p>Click <a href="https://drive.google.com/file/d/12ZHYJIj_2zM0Ratg--3nTdUe9ChRPxsk/view?usp=sharing">here</a> to view my resume.</p>
             </section>
         </body>
+       <v-footer
+            padless
+            >
+            <v-row
+            justify="center"
+            no-gutters
+            >
+            <v-col
+                class="footer-style text-center"
+                cols="12"
+            >
+            {{ new Date().getFullYear() }} — <strong>Web Deseign by Trevor Wong</strong>
+            </v-col>
+            </v-row>
+        </v-footer>
     </section>
 </template>
 
 <script>
+import '../css/preloader.scss'
 import '../css/mainStyle.scss'
 import anime from 'animejs';
 
@@ -198,31 +213,24 @@ import anime from 'animejs';
             pushToThankyou() {
                 this.$router.push({name: 'Thankyou'})
             },
+            preloader() {
+                anime({
+                targets: '#preload-svg path',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+                duration: 1000,
+                delay: function(el, i) { return i * 100 },
+                direction: 'alternate',
+                });
+            },
             animateHeading1() {
                 anime({
                 targets: '.intro-section',
-                translateY: -150,
+                translateY: -120,
                 delay: 300,
                 duration: 1500
                 });
-                // this.toggle = true;
             },
-            animateHeading2() {
-                anime({
-                targets: '.intro-section2',
-                translateY: -150,
-                delay: 400,
-                duration: 1500
-                })
-            },
-            animateHeading3() {
-                anime({
-                targets: '.intro-section',
-                translateY: -150,
-                delay: 500,
-                duration: 1500
-                });
-            }
         },
         mounted() {
             this.animateHeading1();
