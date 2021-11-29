@@ -108,7 +108,7 @@ nav .menu-text a:hover {
         align-self: center;
     }
     div > h2 {
-        color: #cbcbce;
+        color: #7e7e85;
         font-family:'fira code';
         align-self: center;
         justify-self: center;
@@ -141,6 +141,7 @@ nav .menu-text a:hover {
 }
 
 .portfolio-heading {
+    font-family:'fira code';
     margin: 10vh 0;
     text-align: center;
     font-size: 4rem;
@@ -174,42 +175,63 @@ nav .menu-text a:hover {
 .bar1 {
     width: 90%;
     height: 20px;
-    background-color: rgb(35, 59, 192);
+    background: linear-gradient(87deg, rgba(55,113,213,1) 28%, rgba(57,135,122,1) 79%);
     border-radius: 25px;
 }
 .bar2 {
     width: 75%;
     height: 20px;
-    background-color: rgb(35, 59, 192);
+    background: linear-gradient(87deg, rgba(55,113,213,1) 28%, rgba(57,135,122,1) 79%);
     border-radius: 25px;
 }
 .bar3 {
     width: 85%;
     height: 20px;
-    background-color: rgb(35, 59, 192);
+    background: linear-gradient(87deg, rgba(55,113,213,1) 28%, rgba(57,135,122,1) 79%);
     border-radius: 25px;
 }
 .bar4 {
     width: 80%;
     height: 20px;
-    background-color: rgb(35, 59, 192);
+    background: linear-gradient(87deg, rgba(55,113,213,1) 28%, rgba(57,135,122,1) 79%);
     border-radius: 25px;
 }
 .bar5 {
     width: 85%;
     height: 20px;
-    background-color: rgb(35, 59, 192);
+    background: linear-gradient(87deg, rgba(55,113,213,1) 28%, rgba(57,135,122,1) 79%);
     border-radius: 25px;
 }
 .bar6 {
     width: 75%;
     height: 20px;
-    background-color: rgb(35, 59, 192);
+    background: linear-gradient(87deg, rgba(55,113,213,1) 28%, rgba(57,135,122,1) 79%);
     border-radius: 25px;
 }
 .inner_heading {
     color: rgb(201, 176, 139);
 }
+
+//************ Additional Skill List**************
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 5vh;
+    row-gap: 20px;
+    img {
+        height: 80px;
+        justify-self: center;
+    }
+    p {
+        justify-self: center;
+        font-weight: 700;
+    }
+}
+
+
 
 /* *********PROJECT SECTION************** */
 
@@ -263,7 +285,6 @@ nav .menu-text a:hover {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
@@ -281,11 +302,12 @@ nav .menu-text a:hover {
 
 .contact-heading {
     position: relative;
+    font-family:'fira code';
     margin: 10vh 0;
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
-    margin-top:20px;
+    margin-top:50px;
     
 }
 #containerContact{

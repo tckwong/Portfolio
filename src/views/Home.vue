@@ -92,7 +92,19 @@
                     <div class="skills skillContainer">
                         <div class="skills bar6"></div>
                     </div>
-                    
+                </div>
+            </section>
+            <!-- Additional Skills -->
+            <section>
+                <div class="skill-list">
+                    <img src="@/assets/nodejsicon.png" alt="nodeJS logo">
+                    <img src="@/assets/javaicon.png" alt="Java logo">
+                    <img src="@/assets/vbaicon.png" alt="VBa logo">
+                    <img src="@/assets/bootstrapicon.png" alt="Boostrap logo">
+                    <p>NodeJS</p>
+                    <p>Java</p>
+                    <p>VBA</p>
+                    <p>Bootstrap</p>
                 </div>
             </section>
             <!-- Project Section -->
